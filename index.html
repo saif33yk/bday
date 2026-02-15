@@ -7,15 +7,16 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <!-- Background Music -->
-    <audio id="myAudio" autoplay loop>
+    <audio id="myAudio" loop>
         <source src="aud.mp3" type="audio/mp3">
     </audio>
 
-    <!-- Main Canvas for Tree Animation -->
+    <!-- Offscreen canvas for static tree (pre-rendered) -->
+    <canvas id="treeCanvas" style="display: none;"></canvas>
+    
+    <!-- Main canvas for animated hearts -->
     <canvas id="canvas"></canvas>
 
-    <!-- Text Container with Typewriter Effect -->
     <div id="text-container">
         <span class="say">Hey you 💕</span><br>
         <span class="say">Happy Birthday 🎈</span><br>
@@ -26,13 +27,11 @@
         <span class="say">Hope u have a great day today 💖🎂</span>
     </div>
 
-    <!-- Click to start overlay -->
     <div id="click-me" onclick="startAnimation()">
         💗 Click Me !<br>
         <small>Birthday Queen !</small>
     </div>
 
-    <script src="functions.js"></script>
     <script src="love.js"></script>
 </body>
 </html>
